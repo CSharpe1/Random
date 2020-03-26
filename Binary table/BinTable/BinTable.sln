@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.1062
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BinTable", "BinTable\BinTable.csproj", "{28551D03-01A8-4616-A8F6-3E7945AAA604}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{28551D03-01A8-4616-A8F6-3E7945AAA604}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{28551D03-01A8-4616-A8F6-3E7945AAA604}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{28551D03-01A8-4616-A8F6-3E7945AAA604}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{28551D03-01A8-4616-A8F6-3E7945AAA604}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7EEE32E3-ACE1-44D0-A8C8-BCE5B39DCA3A}
+	EndGlobalSection
+EndGlobal

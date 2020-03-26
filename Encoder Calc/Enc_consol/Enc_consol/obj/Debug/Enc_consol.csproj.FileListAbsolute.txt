@@ -1,0 +1,7 @@
+C:\Users\charles.sharpe\OneDrive - Global Graphics PLC\Documents\CS\Encoder Calc\Enc_consol\Enc_consol\bin\Debug\Enc_consol.exe.config
+C:\Users\charles.sharpe\OneDrive - Global Graphics PLC\Documents\CS\Encoder Calc\Enc_consol\Enc_consol\bin\Debug\Enc_consol.exe
+C:\Users\charles.sharpe\OneDrive - Global Graphics PLC\Documents\CS\Encoder Calc\Enc_consol\Enc_consol\bin\Debug\Enc_consol.pdb
+C:\Users\charles.sharpe\OneDrive - Global Graphics PLC\Documents\CS\Encoder Calc\Enc_consol\Enc_consol\obj\Debug\Enc_consol.csprojAssemblyReference.cache
+C:\Users\charles.sharpe\OneDrive - Global Graphics PLC\Documents\CS\Encoder Calc\Enc_consol\Enc_consol\obj\Debug\Enc_consol.csproj.CoreCompileInputs.cache
+C:\Users\charles.sharpe\OneDrive - Global Graphics PLC\Documents\CS\Encoder Calc\Enc_consol\Enc_consol\obj\Debug\Enc_consol.exe
+C:\Users\charles.sharpe\OneDrive - Global Graphics PLC\Documents\CS\Encoder Calc\Enc_consol\Enc_consol\obj\Debug\Enc_consol.pdb

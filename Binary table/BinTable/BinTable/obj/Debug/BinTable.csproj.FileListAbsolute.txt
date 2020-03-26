@@ -1,0 +1,10 @@
+C:\Users\charles.sharpe\OneDrive - Global Graphics PLC\Documents\CS\Binary table\BinTable\BinTable\bin\Debug\BinTable.exe.config
+C:\Users\charles.sharpe\OneDrive - Global Graphics PLC\Documents\CS\Binary table\BinTable\BinTable\bin\Debug\BinTable.exe
+C:\Users\charles.sharpe\OneDrive - Global Graphics PLC\Documents\CS\Binary table\BinTable\BinTable\bin\Debug\BinTable.pdb
+C:\Users\charles.sharpe\OneDrive - Global Graphics PLC\Documents\CS\Binary table\BinTable\BinTable\obj\Debug\BinTable.csprojAssemblyReference.cache
+C:\Users\charles.sharpe\OneDrive - Global Graphics PLC\Documents\CS\Binary table\BinTable\BinTable\obj\Debug\BinTable.Form1.resources
+C:\Users\charles.sharpe\OneDrive - Global Graphics PLC\Documents\CS\Binary table\BinTable\BinTable\obj\Debug\BinTable.Properties.Resources.resources
+C:\Users\charles.sharpe\OneDrive - Global Graphics PLC\Documents\CS\Binary table\BinTable\BinTable\obj\Debug\BinTable.csproj.GenerateResource.cache
+C:\Users\charles.sharpe\OneDrive - Global Graphics PLC\Documents\CS\Binary table\BinTable\BinTable\obj\Debug\BinTable.csproj.CoreCompileInputs.cache
+C:\Users\charles.sharpe\OneDrive - Global Graphics PLC\Documents\CS\Binary table\BinTable\BinTable\obj\Debug\BinTable.exe
+C:\Users\charles.sharpe\OneDrive - Global Graphics PLC\Documents\CS\Binary table\BinTable\BinTable\obj\Debug\BinTable.pdb

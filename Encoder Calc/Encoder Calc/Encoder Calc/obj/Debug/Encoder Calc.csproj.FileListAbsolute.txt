@@ -1,0 +1,10 @@
+C:\Users\charles.sharpe\OneDrive - Global Graphics PLC\Documents\CS\Encoder Calc\Encoder Calc\Encoder Calc\bin\Debug\Encoder Calc.exe.config
+C:\Users\charles.sharpe\OneDrive - Global Graphics PLC\Documents\CS\Encoder Calc\Encoder Calc\Encoder Calc\bin\Debug\Encoder Calc.exe
+C:\Users\charles.sharpe\OneDrive - Global Graphics PLC\Documents\CS\Encoder Calc\Encoder Calc\Encoder Calc\bin\Debug\Encoder Calc.pdb
+C:\Users\charles.sharpe\OneDrive - Global Graphics PLC\Documents\CS\Encoder Calc\Encoder Calc\Encoder Calc\obj\Debug\Encoder Calc.csprojAssemblyReference.cache
+C:\Users\charles.sharpe\OneDrive - Global Graphics PLC\Documents\CS\Encoder Calc\Encoder Calc\Encoder Calc\obj\Debug\Encoder_Calc.Form1.resources
+C:\Users\charles.sharpe\OneDrive - Global Graphics PLC\Documents\CS\Encoder Calc\Encoder Calc\Encoder Calc\obj\Debug\Encoder_Calc.Properties.Resources.resources
+C:\Users\charles.sharpe\OneDrive - Global Graphics PLC\Documents\CS\Encoder Calc\Encoder Calc\Encoder Calc\obj\Debug\Encoder Calc.csproj.GenerateResource.cache
+C:\Users\charles.sharpe\OneDrive - Global Graphics PLC\Documents\CS\Encoder Calc\Encoder Calc\Encoder Calc\obj\Debug\Encoder Calc.csproj.CoreCompileInputs.cache
+C:\Users\charles.sharpe\OneDrive - Global Graphics PLC\Documents\CS\Encoder Calc\Encoder Calc\Encoder Calc\obj\Debug\Encoder Calc.exe
+C:\Users\charles.sharpe\OneDrive - Global Graphics PLC\Documents\CS\Encoder Calc\Encoder Calc\Encoder Calc\obj\Debug\Encoder Calc.pdb

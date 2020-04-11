@@ -8,7 +8,7 @@ import matplotlib.pyplot as plot
 # step 5 
 
 # Get x values of the sine wave 
-time        = np.arange(0,3*np.pi,0.1);    #np.arange = 0,0.1,0.2,0.3 ... 10
+time        = np.arange(0, 10, 0.1);    
 
 # A sin(Omeage time)
 # Frequency = 1/Time

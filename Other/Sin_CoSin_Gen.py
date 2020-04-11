@@ -5,7 +5,9 @@ import matplotlib.pyplot as plot
 # step 2 Plot onto graph
 # step 3 Generate cosine wave
 # step 4 Plot cosine onto graph
-# step 5 
+# step 5 Plot both Sine and cosine on same graph
+# step 6 Ask for frequency to be displayed
+# Step 7 Plot a new sine wave showing the Frequceny typed in
 
 # Get x values of the sine wave 
 time        = np.arange(0, 10, 0.1);    

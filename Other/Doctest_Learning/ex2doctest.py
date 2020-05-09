@@ -3,13 +3,13 @@ import random
 
 def arrayfun(number):
     '''
-    >>> arrayfun(4)
-    [4, 1]
+#    >>> arrayfun(4)
+#    [4, 1]
     >>> arrayfun(4)
     [4, 1, 2]
 
-    >>> arrayfun(4)
-    [4, 1, 2, 3]
+#    >>> arrayfun(4)
+#    [4, 1, 2, 3]
 
 
 

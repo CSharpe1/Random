@@ -1,1 +1,1 @@
-print
+remaing_moves

@@ -1,3 +1,4 @@
+'''
 choice = 4 #choice for how many colours to guess...
 count = 0
 
@@ -24,3 +25,15 @@ while loop < choice:
 result = check[0:loop]
 print(check)
 print(result)
+'''
+
+length = 4
+arraytest = []
+
+
+while len(arraytest) < length:
+    arraytest.append('NA')
+print(arraytest)
+
+testarray = arraytest
+print(testarray)

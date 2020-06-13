@@ -4,17 +4,22 @@ import random
 #       Set up variables                            #
 #####################################################
 remaing_moves = 0
-selection = []
-howyoudid = ['NA','NA','NA','NA']
-playerguess = ['NA','NA','NA','NA']
 Won = 0
 Turns = 0
 check = 0
 
-#####################################################
-#       Functions for the code                      #
-#####################################################
-
+def array_setup(length):
+    """[generates the different arrarys into a blank format of 'NA']
+    """
+    arraytest = []
+    while len(arraytest) < (length):
+        arraytest.append('NA')
+    howyoudid   = arraytest
+    playerguess = arraytest
+    check       = arraytest 
+    return howyoudid
+    return playerguess
+    return check
 
 def Generate(selectionlen):
     """[summary]
@@ -27,7 +32,6 @@ def Generate(selectionlen):
     """
     colour = 'rgboy'
     selection =[]
-    print("Generate colours")
     for i in range(selectionlen):
         selection += random.choice(colour)
     return selection
@@ -53,10 +57,8 @@ def UserGuess(selectionlen):
 def Check_Guess(Guess): # I dont like what I have done here, I want to change this to something else...maybe I could use a slice on the array?
     """[check the users guess again the computers generated anwser
         Need to improve since this will only work with a fixed input]
-
     Args:
         Guess ([type]): [description]
-
     Returns:
         [type]: [description]
     """
@@ -70,24 +72,19 @@ def Check_Guess(Guess): # I dont like what I have done here, I want to change th
         else:
             howyoudid[check] = 'NO'
         check += 1
-    print("Out of loop")
-   
+    print("How you did", howyoudid)
+    return howyoudid
 
 
 
-def save():
-    """Save user guess and the result of the check to help the user on there next choice.
-    """
 
 def guess_correct(howyoudid):
-    """[summary]
-
+    """Check if the guess was correct
     Args:
         howyoudid ([type]): [description]
     """
     #choice is the variable for how many items to guess, so i need to make this dynamicly size
-
-    check = ['','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','',]
+    check = ['','','','','','','','','','','','','','','','','','','','','','','','','','','','',]
     loop = 0
     while loop < choice:
         check[loop] = 'Correct'
@@ -96,7 +93,9 @@ def guess_correct(howyoudid):
     if howyoudid[:] == result:
         return Won == 1 
     else :
-        
+        return        
+
+
 #####################################################
 #       Thsi is the start of the Game               #
 #####################################################
@@ -106,53 +105,30 @@ choice2 = choice
 remaing_moves = int(input("how many moves do you want??"))
 selection = Generate(choice)    #Computers generated string
 #remaing_moves -= 1
-
+array_setup(choice)
 
 while True:
     print(selection)
-    UserGuess(choice)
+#    UserGuess(choice)
+#######################
+    print("Player Guess")
+    playerguess = selection
+
+
+#######################
     result = Check_Guess(playerguess)
-    print("Result", result )
-    print("Won", Won)
- #   Turn_counter()
     remaing_moves -= 1
     print("    remaing_moves",     remaing_moves)
     print(Turns)
     guess_correct(howyoudid)
-    print("End of loop starting again")
 
     if remaing_moves == 0:
-        print("Out of moves")
-        print("Thanks for playing")
+        print('''Out of moves \nThanks for playing''')
         break
 
     if Won == 1:
-        print("You Won the Game Congratulations!!!")
-        print("Thanks for playing")
+        print(''' You Won the Game Congratulations!!! \nThanks for playing''')
         break
 
 
 
-#####################################################
-#       Old code that was removed                   #
-#####################################################
-#def Turn_counter():
-#    """Provides count down for moves
-#    """
-#    if remaing_moves <= 0:
-#        Turns == 1
-#        print("END OF MOVES")
-#        return Turns
-#    else:
-#        return remaing_moves
-#
-#
-#
-#
-#
-#
-#
-#
-#####################################################
-#       Old code that was removed                   #
-#####################################################

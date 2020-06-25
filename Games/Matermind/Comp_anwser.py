@@ -94,11 +94,8 @@ def guess_correct(howyoudid):
         return Won == 1 
     else :
         return        
-<<<<<<< HEAD
-=======
 
 
->>>>>>> 9a33a1bd1cce7cd4c30aa7cbe852707668d36fc9
 #####################################################
 #       Thsi is the start of the Game               #
 #####################################################

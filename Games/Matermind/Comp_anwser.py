@@ -96,11 +96,10 @@ def guess_correct(howyoudid):
     if howyoudid[:] == result:
         return Won == 1 
     else :
-        
+        return        
 #####################################################
 #       Thsi is the start of the Game               #
 #####################################################
-
 choice = int(input("length of choice question?"))
 choice2 = choice
 remaing_moves = int(input("how many moves do you want??"))

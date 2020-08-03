@@ -1,7 +1,0 @@
-C:\Users\charles.sharpe\OneDrive - Global Graphics PLC\Documents\CS\Binary table\Bin Table\Bin Table\bin\Debug\Bin Table.exe.config
-C:\Users\charles.sharpe\OneDrive - Global Graphics PLC\Documents\CS\Binary table\Bin Table\Bin Table\bin\Debug\Bin Table.exe
-C:\Users\charles.sharpe\OneDrive - Global Graphics PLC\Documents\CS\Binary table\Bin Table\Bin Table\bin\Debug\Bin Table.pdb
-C:\Users\charles.sharpe\OneDrive - Global Graphics PLC\Documents\CS\Binary table\Bin Table\Bin Table\obj\Debug\Bin Table.csprojAssemblyReference.cache
-C:\Users\charles.sharpe\OneDrive - Global Graphics PLC\Documents\CS\Binary table\Bin Table\Bin Table\obj\Debug\Bin Table.csproj.CoreCompileInputs.cache
-C:\Users\charles.sharpe\OneDrive - Global Graphics PLC\Documents\CS\Binary table\Bin Table\Bin Table\obj\Debug\Bin Table.exe
-C:\Users\charles.sharpe\OneDrive - Global Graphics PLC\Documents\CS\Binary table\Bin Table\Bin Table\obj\Debug\Bin Table.pdb

@@ -26,14 +26,5 @@ result = check[0:loop]
 print(check)
 print(result)
 '''
+import HTSeq
 
-length = 4
-arraytest = []
-
-
-while len(arraytest) < length:
-    arraytest.append('NA')
-print(arraytest)
-
-testarray = arraytest
-print(testarray)

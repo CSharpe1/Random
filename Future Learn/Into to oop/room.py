@@ -6,6 +6,7 @@ class   Room():
   #      self.y              =   ydimension
    #     self.doors          =   doors
         self.linked_rooms   =   {}
+        self.character      =   None
 
     def set_description(self,   room_description):
         self.description    =   room_description
@@ -22,6 +23,13 @@ class   Room():
     def get_name(self):
         return  self.name
     
+    def set_character(self, new_character):
+        self.character  =   new_character
+    
+    def get_character(self):
+        return  self.character
+
+
     def name_description(self):
         print(self.name)
 

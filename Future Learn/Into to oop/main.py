@@ -1,9 +1,12 @@
 from room   import  Room
 from item   import  Item
+from character  import *
+
 
 kitchen         =   Room("Kitchen")      #, 10, 30, 2)
 ballroom        =   Room("Ballroom")
 dining_hall     =   Room("Dining_hall")
+basement        =   Room("Basement")
 
 kitchen.set_description("A dank and dirty place, buzzing with flies!")
 kitchen.set_name("The Kitchen")
@@ -13,6 +16,9 @@ ballroom.set_name("The Ballroom")
 
 dining_hall.set_description("Nothing remains in the empty husk")
 dining_hall.set_name("The Dinning Hall")
+
+basement.set_description("Clean, bright and warm, this is wrong...")
+basement.set_name("The basemenat")
 
 #################################
 '''
@@ -31,11 +37,22 @@ dining_hall.link_room(kitchen, "north")
 dining_hall.link_room(ballroom, "west")
 ballroom.link_room(dining_hall, "east")
 
+basement.link_room(kitchen, "up")
+kitchen.link_room(basement, "down")
+
+
+###         Create enemy    ###
+dave    =   Enemy("Dave","The caretaker","")
+dave.set_conversation("You should never have come here hehehe")
+dave.set_weakness("silver knife")
+basement.set_character(dave)
+
 ####
 '''
 dining_hall.get_details()
 kitchen.get_details()
 ballroom.get_details()
+beasement.get_details()
 '''
 ####
 
@@ -59,6 +76,21 @@ current_room    =   kitchen
 while True:
     print("\n")
     current_room.get_details()
-    command         =   input(">")
-    current_room    =   current_room.move(command)
 
+    inhabitant  =   current_room.get_character()
+    if inhabitant   is not None:
+        inhabitant.describe()
+
+    command         =   input(">")
+    while command != ["north", "south", "east", "west", "up", "down", "fight", "exit"]:
+        if command in ["north", "south", "east", "west", "up", "down"]:
+            current_room = current_room.move(command)
+        elif    command ==  "fight":
+            fight_with = input()
+            dave.fight(fight_with)
+  #  elif command == "talk":
+    # Add code here
+        elif    command ==  "exit":
+            exit()
+        else:
+            command         =   input("Inpuut not recognised, please use either\n "  '''"north", "south", "east", "west", "up", "down", "fight" or "exit" \n >"''')

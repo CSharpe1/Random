@@ -1,10 +1,21 @@
 from room   import  Room
 from item   import  Item
 from character  import *
+from rpginfo    import *
+
+
+
 
 #############################################
 #               Set up                      #
 #############################################
+
+abandoned_mansion   = RPGInfo("Abandoned Mansion")
+abandoned_mansion.welcome()
+RPGInfo.info()
+RPGInfo.author  =   "ME"
+
+
 #   Rooms
 kitchen         =   Room("Kitchen")     
 ballroom        =   Room("Ballroom")
@@ -161,3 +172,7 @@ while dead == False:
             command         =   input("Input not recognised \n>")
     else:
         command    =   input("Please choese an action")
+
+
+
+RPGInfo.credits()

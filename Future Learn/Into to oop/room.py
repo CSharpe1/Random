@@ -1,4 +1,7 @@
 class   Room():
+    number_of_rooms =   0
+       
+        
     def __init__(self, room_name):        # constructor init = initialisation, self = This object 
         """[summary]
 
@@ -8,10 +11,12 @@ class   Room():
             ydimension ([type]): [description]
             doors ([type]): [description]
         """
+
         self.name           =   room_name    
         self.description    =   None        # none = start without a value
         self.linked_rooms   =   {}
         self.character      =   None
+        Room.number_of_rooms    =   Room.number_of_rooms    +   1
 
     def set_description(self,   room_description):
         """[summary]

@@ -9,16 +9,16 @@ dining_hall     =   Room("Dining_hall")
 basement        =   Room("Basement")
 
 kitchen.set_description("A dank and dirty place, buzzing with flies!")
-kitchen.set_name("The Kitchen")
+kitchen.set_name("The Kitchen   \n  --------------------")
 
 ballroom.set_description("Tired and worn and wet, how many years has it been since it was last used?")
-ballroom.set_name("The Ballroom")
+ballroom.set_name("The Ballroom   \n  --------------------")
 
 dining_hall.set_description("Nothing remains in the empty husk")
-dining_hall.set_name("The Dinning Hall")
+dining_hall.set_name("The Dinning Hall   \n  --------------------")
 
 basement.set_description("Clean, bright and warm, this is wrong...")
-basement.set_name("The basemenat")
+basement.set_name("The basemenat   \n  --------------------")
 
 #################################
 '''
@@ -47,15 +47,6 @@ dave.set_conversation("You should never have come here hehehe")
 dave.set_weakness("silver knife")
 basement.set_character(dave)
 
-####
-'''
-dining_hall.get_details()
-kitchen.get_details()
-ballroom.get_details()
-beasement.get_details()
-'''
-####
-
 # set up the different items
 frying_pan         =   Item("Frying_Pan")      
 sheet_music        =   Item("Sheet_Music")
@@ -63,13 +54,15 @@ silver_knife       =   Item("Silver_Knife")
 
 frying_pan.set_description("What a strage Frying pan, it is obviosly very old and seen better days but somehow it is warm to the touch, as if its just been used")
 frying_pan.set_name("Frying Pan")
+basement.set_item(frying_pan)
 
 sheet_music.set_description("So well used it almost feels like its not there, there is more than just music inscribed on here, but what is it?")
 sheet_music.set_name("Sheet Music")
+ballroom.set_item(sheet_music)
 
 silver_knife.set_description("Tarnised, but still sharp, heavy and well balanced, is this really just a knfe for eating?")
 silver_knife.set_name("Silver Knife")
-
+dining_hall.set_item(silver_knife)
 
 current_room    =   kitchen
 
@@ -80,6 +73,10 @@ while True:
     inhabitant  =   current_room.get_character()
     if inhabitant   is not None:
         inhabitant.describe()
+
+    items       =   current_room.get_item()
+    if items        is not None:
+        items.describe()
 
     command         =   input(">")
     while command != ["north", "south", "east", "west", "up", "down", "fight", "exit"]:
@@ -94,3 +91,9 @@ while True:
             exit()
         else:
             command         =   input("Inpuut not recognised, please use either\n "  '''"north", "south", "east", "west", "up", "down", "fight" or "exit" \n >"''')
+
+
+
+
+
+

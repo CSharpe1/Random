@@ -3,7 +3,10 @@ from item   import  Item
 from character  import *
 from rpginfo    import *
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 34210d54c6147d656175c48977854fb69015d6af
 #############################################
 #               Set up                      #
 #############################################
@@ -13,6 +16,9 @@ abandoned_mansion.welcome()
 RPGInfo.info()
 RPGInfo.author  =   "ME"
 
+actions         =   ["north", "south", "east", "west", "down", "up", "talk", "fight", "take", "search", "invertory", "exit" ]
+directon        =   ["north", "south", "east", "west", "up", "down"]
+invertory       =   []
 
 #   Rooms
 kitchen         =   Room("Kitchen")     
@@ -81,8 +87,11 @@ toilet.set_description("------------\nLets hope you dont need to use this...\n--
 #   Items
 
 frying_pan.set_description("What a strage Frying pan, it is obviosly very old and seen better days but somehow it is warm to the touch, as if its just been used")
+kitchen.set_item(frying_pan)
 sheet_music.set_description("So well used it almost feels like its not there, there is more than just music inscribed on here, but what is it?")
+ballroom.set_item(sheet_music)
 silver_knife.set_description("Tarnised, but still sharp, heavy and well balanced, is this really just a knife for eating?")
+dining_hall.set_item(silver_knife)
 
 #################################
 '''
@@ -129,6 +138,11 @@ bedroom1.link_room(up_hall, "north")
 up_hall.link_room(bathroom, "west")
 bathroom.link_room(up_hall, "east")
 
+def invertory(inv_stock, inv_take)
+    """
+    """
+    return inv_stock
+
 ######################################
 ##          Start of Game           ##
 ######################################
@@ -139,11 +153,12 @@ dead = False
 while dead == False:
     current_room.get_details()
     inhabitant  =   current_room.get_character()
+    item        =   current_room.get_item()
     if inhabitant   is not None:
         inhabitant.describe()
     command         =   input(">")
-    if command != ["north", "south", "east", "west", "up", "down", "fight", "exit"]:
-        if command in ["north", "south", "east", "west", "up", "down"]:
+    if command !=   actions: 
+        if command in directon:
             current_room = current_room.move(command)
 
         elif    command ==  "fight":
@@ -163,13 +178,23 @@ while dead == False:
                 inhabitant.talk()
             else:
                 print("no one here to talk with")
-                
+        elif    command ==  "take":
+            print("take")
+
+        elif    command ==  "search":
+            print("search")
+            if item is not None and isinstance(item )###############
+        
+        elif    command ==  "invertory":
+            print("invertory")
+            
+
         elif    command ==  "exit":
             exit()
         else:
             command         =   input("Input not recognised \n>")
     else:
-        command    =   input("Please choese an action")
+        command    =   input("Please choese an action;", actions)
 
 
 

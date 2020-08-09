@@ -20,7 +20,7 @@ class   Room():
 
 '''
     def set_description(self,   room_description):
-        """[summary]
+        """description of room
 
         Args:
             room_description ([type]): [description]
@@ -80,6 +80,14 @@ class   Room():
             [type]: [description]
         """
         return  self.character
+
+
+    def set_item(self, new_item):
+        self.item  =   new_item
+    
+    def get_item(self):
+        return  self.item
+
 
 
     def name_description(self):

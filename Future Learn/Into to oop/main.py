@@ -16,6 +16,9 @@ RPGInfo.info()
 RPGInfo.author  =   "ME"
 
 
+actions         =   ["north", "south", "east", "west", "down", "up", "talk", "fight", "take", "search", "invertory", "exit" ]
+directon        =   ["north", "south", "east", "west", "up", "down"]
+
 #   Rooms
 kitchen         =   Room("Kitchen")     
 ballroom        =   Room("Ballroom")
@@ -33,19 +36,6 @@ frying_pan         =   Item("Frying_Pan")
 sheet_music        =   Item("Sheet_Music")
 silver_knife       =   Item("Silver_Knife")
 
-<<<<<<< HEAD
-kitchen.set_description("A dank and dirty place, buzzing with flies!")
-kitchen.set_name("The Kitchen   \n  --------------------")
-
-ballroom.set_description("Tired and worn and wet, how many years has it been since it was last used?")
-ballroom.set_name("The Ballroom   \n  --------------------")
-
-dining_hall.set_description("Nothing remains in the empty husk")
-dining_hall.set_name("The Dinning Hall   \n  --------------------")
-
-basement.set_description("Clean, bright and warm, this is wrong...")
-basement.set_name("The basemenat   \n  --------------------")
-=======
 ###         Names               ###
 #   Rooms 
 kitchen.set_name("Kitchen")
@@ -98,7 +88,6 @@ toilet.set_description("------------\nLets hope you dont need to use this...\n--
 frying_pan.set_description("What a strage Frying pan, it is obviosly very old and seen better days but somehow it is warm to the touch, as if its just been used")
 sheet_music.set_description("So well used it almost feels like its not there, there is more than just music inscribed on here, but what is it?")
 silver_knife.set_description("Tarnised, but still sharp, heavy and well balanced, is this really just a knife for eating?")
->>>>>>> 436f604896794729caf6cded8a57316f68875387
 
 #################################
 '''
@@ -130,24 +119,6 @@ dining_hall.link_room(down_hall, "south")
 down_hall.link_room(kitchen, "south")
 kitchen.link_room(dining_hall, "north")
 
-<<<<<<< HEAD
-# set up the different items
-frying_pan         =   Item("Frying_Pan")      
-sheet_music        =   Item("Sheet_Music")
-silver_knife       =   Item("Silver_Knife")
-
-frying_pan.set_description("What a strage Frying pan, it is obviosly very old and seen better days but somehow it is warm to the touch, as if its just been used")
-frying_pan.set_name("Frying Pan")
-basement.set_item(frying_pan)
-
-sheet_music.set_description("So well used it almost feels like its not there, there is more than just music inscribed on here, but what is it?")
-sheet_music.set_name("Sheet Music")
-ballroom.set_item(sheet_music)
-
-silver_knife.set_description("Tarnised, but still sharp, heavy and well balanced, is this really just a knfe for eating?")
-silver_knife.set_name("Silver Knife")
-dining_hall.set_item(silver_knife)
-=======
 down_hall.link_room(up_hall, "up")
 up_hall.link_room(down_hall, "down")
 
@@ -166,7 +137,6 @@ bathroom.link_room(up_hall, "east")
 ######################################
 ##          Start of Game           ##
 ######################################
->>>>>>> 436f604896794729caf6cded8a57316f68875387
 
 current_room    =   entrance
 
@@ -176,17 +146,9 @@ while dead == False:
     inhabitant  =   current_room.get_character()
     if inhabitant   is not None:
         inhabitant.describe()
-<<<<<<< HEAD
-
-    items       =   current_room.get_item()
-    if items        is not None:
-        items.describe()
-
-=======
->>>>>>> 436f604896794729caf6cded8a57316f68875387
     command         =   input(">")
-    if command != ["north", "south", "east", "west", "up", "down", "fight", "exit"]:
-        if command in ["north", "south", "east", "west", "up", "down"]:
+    if command !=   actions: 
+        if command in directon:
             current_room = current_room.move(command)
 
         elif    command ==  "fight":
@@ -206,24 +168,22 @@ while dead == False:
                 inhabitant.talk()
             else:
                 print("no one here to talk with")
-                
+        elif    command ==  "take":
+            print("take")
+
+        elif    command ==  "search":
+            print("search")
+        
+        elif    command ==  "invertory":
+            print("invertory")
+
         elif    command ==  "exit":
             exit()
         else:
-<<<<<<< HEAD
-            command         =   input("Inpuut not recognised, please use either\n "  '''"north", "south", "east", "west", "up", "down", "fight" or "exit" \n >"''')
-
-
-
-
-
-
-=======
             command         =   input("Input not recognised \n>")
     else:
-        command    =   input("Please choese an action")
+        command    =   input("Please choese an action;", actions)
 
 
 
 RPGInfo.credits()
->>>>>>> 436f604896794729caf6cded8a57316f68875387

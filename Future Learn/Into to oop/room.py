@@ -16,11 +16,7 @@ class   Room():
         self.description    =   None        # none = start without a value
         self.linked_rooms   =   {}
         self.character      =   None
-<<<<<<< HEAD
-        self.item           =   None
-=======
         Room.number_of_rooms    =   Room.number_of_rooms    +   1
->>>>>>> 436f604896794729caf6cded8a57316f68875387
 
     def set_description(self,   room_description):
         """[summary]

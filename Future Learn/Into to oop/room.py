@@ -19,7 +19,7 @@ class   Room():
         Room.number_of_rooms    =   Room.number_of_rooms    +   1
 
     def set_description(self,   room_description):
-        """[summary]
+        """description of room
 
         Args:
             room_description ([type]): [description]

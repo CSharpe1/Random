@@ -1,12 +1,8 @@
-from room   import  Room
-from item   import  Item
+from room   import  *
+from item   import  *
 from character  import *
 from rpginfo    import *
 
-<<<<<<< HEAD
-
-=======
->>>>>>> 34210d54c6147d656175c48977854fb69015d6af
 #############################################
 #               Set up                      #
 #############################################
@@ -16,9 +12,9 @@ abandoned_mansion.welcome()
 RPGInfo.info()
 RPGInfo.author  =   "ME"
 
-actions         =   ["north", "south", "east", "west", "down", "up", "talk", "fight", "take", "search", "invertory", "exit" ]
+actions         =   ["north", "south", "east", "west", "down", "up", "talk", "fight", "take", "search", "invertory","take", "exit" ]
 directon        =   ["north", "south", "east", "west", "up", "down"]
-invertory       =   []
+inv =   ["STUFF"]
 
 #   Rooms
 kitchen         =   Room("Kitchen")     
@@ -138,10 +134,13 @@ bedroom1.link_room(up_hall, "north")
 up_hall.link_room(bathroom, "west")
 bathroom.link_room(up_hall, "east")
 
-def invertory(inv_stock, inv_take)
-    """
-    """
-    return inv_stock
+
+
+def invertory(item):
+    inv.append(item)
+    print(item)
+    return inv
+
 
 ######################################
 ##          Start of Game           ##
@@ -153,7 +152,7 @@ dead = False
 while dead == False:
     current_room.get_details()
     inhabitant  =   current_room.get_character()
-    item        =   current_room.get_item()
+#   item        =   current_room.get_item()
     if inhabitant   is not None:
         inhabitant.describe()
     command         =   input(">")
@@ -173,20 +172,29 @@ while dead == False:
                     dead = True
             else    :
                 print("No one to fight with.")
+
         elif    command ==  "talk":
             if inhabitant is not None:
                 inhabitant.talk()
             else:
                 print("no one here to talk with")
-        elif    command ==  "take":
-            print("take")
+
 
         elif    command ==  "search":
-            print("search")
-            if item is not None and isinstance(item )###############
-        
+            print("starting the search in 3\n2\n1\nnow!!!!")
+
+#            if item is not None and isinstance(item):   ###############
+#                print("You have found.....\n Take item or leave item")
+#                if command  ==  "take":
+#                    print("You have taken")
+#                    invertory(item)
+#                else:
+#                    print("you have left the item where it is")
+
         elif    command ==  "invertory":
-            print("invertory")
+            print("invertory contains ")
+            print(inv)
+            print("##################")
             
 
         elif    command ==  "exit":

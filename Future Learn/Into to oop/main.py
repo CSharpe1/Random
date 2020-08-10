@@ -3,6 +3,10 @@ from item   import  Item
 from character  import *
 from rpginfo    import *
 
+<<<<<<< HEAD
+
+=======
+>>>>>>> 34210d54c6147d656175c48977854fb69015d6af
 #############################################
 #               Set up                      #
 #############################################

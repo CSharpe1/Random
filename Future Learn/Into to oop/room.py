@@ -18,6 +18,7 @@ class   Room():
         self.character      =   None
         Room.number_of_rooms    =   Room.number_of_rooms    +   1
 
+'''
     def set_description(self,   room_description):
         """description of room
 
@@ -33,7 +34,16 @@ class   Room():
             [type]: [description]
         """
         return  self.description
-    
+'''    
+
+#   converting these getter and setter into properties 
+
+
+
+
+
+
+
     def describe(self):
         """[summary]
         """

@@ -32,6 +32,7 @@ toilet          =   Room("Toilet")
 frying_pan         =   Item("Frying_Pan")      
 sheet_music        =   Item("Sheet_Music")
 silver_knife       =   Item("Silver_Knife")
+door_bell       =   Item("Door Bell")
 
 ###         Names               ###
 #   Rooms 
@@ -50,7 +51,7 @@ toilet.set_name("Toilet")
 frying_pan.set_name("Frying Pan\n********")
 sheet_music.set_name("Sheet Music\n********")
 silver_knife.set_name("Silver Knife\n********")
-
+door_bell.set_name("Door Bell\n********")
 ###         Characters      ###
 #Enemy    
 dave    =   Enemy("Dave","The caretaker","")
@@ -88,6 +89,8 @@ sheet_music.set_description("So well used it almost feels like its not there, th
 ballroom.set_item(sheet_music)
 silver_knife.set_description("Tarnised, but still sharp, heavy and well balanced, is this really just a knife for eating?")
 dining_hall.set_item(silver_knife)
+door_bell.set_description("Solid Iron and rusty")
+entrance.set_item(door_bell)
 
 #################################
 '''
@@ -152,9 +155,12 @@ dead = False
 while dead == False:
     current_room.get_details()
     inhabitant  =   current_room.get_character()
-#   item        =   current_room.get_item()
+    item        =   current_room.get_item()
     if inhabitant   is not None:
         inhabitant.describe()
+
+
+
     command         =   input(">")
     if command !=   actions: 
         if command in directon:
@@ -182,7 +188,11 @@ while dead == False:
 
         elif    command ==  "search":
             print("starting the search in 3\n2\n1\nnow!!!!")
-
+            if item   is not None:
+                item.describe()
+     #   How do i get item name?        item.get_item()
+            else:
+                print("Nothing")
 #            if item is not None and isinstance(item):   ###############
 #                print("You have found.....\n Take item or leave item")
 #                if command  ==  "take":

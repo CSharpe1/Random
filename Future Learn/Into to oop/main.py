@@ -134,10 +134,13 @@ bedroom1.link_room(up_hall, "north")
 up_hall.link_room(bathroom, "west")
 bathroom.link_room(up_hall, "east")
 
-def invertory(inv_stock, inv_take)
+inv_stock = "stock levels"
+
+def invertory():
     """
+    Add items to the invertory
     """
-    return inv_stock
+    return print(inv_stock)
 
 ######################################
 ##          Start of Game           ##
@@ -179,7 +182,11 @@ while dead == False:
 
         elif    command ==  "search":
             print("search")
-            if item is not None and isinstance(item )###############
+            if item is not None and isinstance(item):
+                print("item is here")
+            ###############
+            else:
+                print("no item is here")
         
         elif    command ==  "invertory":
             print("invertory")

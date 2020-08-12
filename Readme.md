@@ -1,5 +1,15 @@
 # some project ideas to build up;
 
+I will need to seperate the Random folder into other repositorys. 
+This folder is now very hard to manage due to all the folders and different "Tests"/"Learning" that has now been set up.
+
+
+## Future Learn
+From here i have been runing through some the the raspberry PI into topics.
+
+
+
+
 * Found on a youtube video "Kalle Hallden"
 * Web scraper
 * Build an Api

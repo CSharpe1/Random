@@ -16,11 +16,9 @@ class   Room():
         self.description    =   None        # none = start without a value
         self.linked_rooms   =   {}
         self.character      =   None
-        self.item           =   None
-
         Room.number_of_rooms    =   Room.number_of_rooms    +   1
 
-
+'''
     def set_description(self,   room_description):
         """description of room
 
@@ -36,16 +34,21 @@ class   Room():
             [type]: [description]
         """
         return  self.description
-    
+'''    
 
 #   converting these getter and setter into properties 
+
+
+
+
+
+
+
     def describe(self):
         """[summary]
         """
         print(self.description)
     ####################################
-
-
     def set_name(self, room_name):
         """[summary]
 
@@ -62,30 +65,6 @@ class   Room():
         """
         return  self.name
     
-
-######################################################################
-##          Change the set and get character to use @property       ##
-######################################################################
-#    @property
-#    def character(self, new_character):
-#        """[summary]#
-#
-#        Args:
-#            new_character ([type]): [description]#
-#        Returns:
-#            [type]: [description]
-#        """
-#        return  self.character
-#    @character.setter
-#    def chaaracter(self, new_character):
-#        """[summary]
-#        Args:
-#            new_character ([type]): [description]
-#        """
-#        self._character = new_character      
-######################################################
-##             Comment out the below                ##
-######################################################
     def set_character(self, new_character):
         """[summary]
 
@@ -101,11 +80,13 @@ class   Room():
             [type]: [description]
         """
         return  self.character
-#####################################################
-##              End of changes                     ##
-#####################################################
 
 
+    def set_item(self, new_item):
+        self.item  =   new_item
+    
+    def get_item(self):
+        return  self.item
 
 
 
@@ -154,11 +135,3 @@ class   Room():
         else:
             print("you can't go that way")
             return  self
-
-
-    def set_item(self, new_item):
-        self.item  =   new_item
-    
-    def get_item(self):
-        return  self.item
-

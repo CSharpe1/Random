@@ -2,7 +2,6 @@ from room   import  *
 from item   import  *
 from character  import *
 from rpginfo    import *
-
 #############################################
 #               Set up                      #
 #############################################
@@ -12,9 +11,9 @@ abandoned_mansion.welcome()
 RPGInfo.info()
 RPGInfo.author  =   "ME"
 
-actions         =   ["north", "south", "east", "west", "down", "up", "talk", "fight", "take", "search", "invertory","take", "leave","use", "exit" ]
+actions         =   ["north", "south", "east", "west", "down", "up", "talk", "fight", "take", "search", "invertory", "exit" ]
 directon        =   ["north", "south", "east", "west", "up", "down"]
-inv =   ["STUFF"]
+invertory       =   []
 
 #   Rooms
 kitchen         =   Room("Kitchen")     
@@ -32,7 +31,6 @@ toilet          =   Room("Toilet")
 frying_pan         =   Item("Frying_Pan")      
 sheet_music        =   Item("Sheet_Music")
 silver_knife       =   Item("Silver_Knife")
-door_bell       =   Item("Door Bell")
 
 ###         Names               ###
 #   Rooms 
@@ -48,10 +46,10 @@ bedroom1.set_name("BedRoom 1")
 bathroom.set_name("Bathroom")
 toilet.set_name("Toilet")          
 #   Items
-frying_pan.set_name("Frying Pan")
-sheet_music.set_name("Sheet Music")
-silver_knife.set_name("Silver Knife")
-door_bell.set_name("Door Bell")
+frying_pan.set_name("Frying Pan\n********")
+sheet_music.set_name("Sheet Music\n********")
+silver_knife.set_name("Silver Knife\n********")
+
 ###         Characters      ###
 #Enemy    
 dave    =   Enemy("Dave","The caretaker","")
@@ -82,15 +80,12 @@ bedroom1.set_description("------------\nBedroom...\n------------")
 bathroom.set_description("------------\nA bathroom that you feel dirter walking out than when you               entred\n------------")        
 toilet.set_description("------------\nLets hope you dont need to use this...\n------------")          
 #   Items
-
 frying_pan.set_description("What a strage Frying pan, it is obviosly very old and seen better days but somehow it is warm to the touch, as if its just been used")
 kitchen.set_item(frying_pan)
 sheet_music.set_description("So well used it almost feels like its not there, there is more than just music inscribed on here, but what is it?")
 ballroom.set_item(sheet_music)
 silver_knife.set_description("Tarnised, but still sharp, heavy and well balanced, is this really just a knife for eating?")
 dining_hall.set_item(silver_knife)
-door_bell.set_description("Solid Iron and rusty")
-entrance.set_item(door_bell)
 
 #################################
 '''
@@ -137,7 +132,6 @@ bedroom1.link_room(up_hall, "north")
 up_hall.link_room(bathroom, "west")
 bathroom.link_room(up_hall, "east")
 
-<<<<<<< HEAD
 inv_stock = "stock levels"
 
 def invertory():
@@ -145,15 +139,6 @@ def invertory():
     Add items to the invertory
     """
     return print(inv_stock)
-=======
-
-
-def invertory(item):
-    inv.append(item)
-    print(item)
-    return inv
-
->>>>>>> 64f422ed59dfb22fe0a470aeb5ebc29713ccf9ac
 
 ######################################
 ##          Start of Game           ##
@@ -168,7 +153,6 @@ while dead == False:
     item        =   current_room.get_item()
     if inhabitant   is not None:
         inhabitant.describe()
-
     command         =   input(">")
     if command !=   actions: 
         if command in directon:
@@ -186,15 +170,15 @@ while dead == False:
                     dead = True
             else    :
                 print("No one to fight with.")
-
         elif    command ==  "talk":
             if inhabitant is not None:
                 inhabitant.talk()
             else:
                 print("no one here to talk with")
+        elif    command ==  "take":
+            print("take")
 
         elif    command ==  "search":
-<<<<<<< HEAD
             print("search")
             if item is not None and isinstance(item):
                 print("item is here")
@@ -202,24 +186,8 @@ while dead == False:
             else:
                 print("no item is here")
         
-=======
-            print("starting the search in 3\n2\n1\nnow!!!!")
-            if item   is not None:
-                item.describe()
-                command         =   input("What do you want to do?\n take, leave or use?\n>")
-                if command  ==  "take":
-                    print("You have taken")
-                    invertory(item)
-                elif command == "use":
-                    print("You have used............")
-                else:
-                    print("you have left the item where it is")
-
->>>>>>> 64f422ed59dfb22fe0a470aeb5ebc29713ccf9ac
         elif    command ==  "invertory":
-            print("invertory contains ")
-            print(inv)
-            print("##################")
+            print("invertory")
             
 
         elif    command ==  "exit":
@@ -228,6 +196,7 @@ while dead == False:
             command         =   input("Input not recognised \n>")
     else:
         command    =   input("Please choese an action;", actions)
+
 
 
 RPGInfo.credits()

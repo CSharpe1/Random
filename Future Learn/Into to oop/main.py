@@ -12,7 +12,7 @@ abandoned_mansion.welcome()
 RPGInfo.info()
 RPGInfo.author  =   "ME"
 
-actions         =   ["north", "south", "east", "west", "down", "up", "talk", "fight", "take", "search", "invertory","take", "exit" ]
+actions         =   ["north", "south", "east", "west", "down", "up", "talk", "fight", "take", "search", "invertory","take", "leave","use", "exit" ]
 directon        =   ["north", "south", "east", "west", "up", "down"]
 inv =   ["STUFF"]
 
@@ -48,10 +48,10 @@ bedroom1.set_name("BedRoom 1")
 bathroom.set_name("Bathroom")
 toilet.set_name("Toilet")          
 #   Items
-frying_pan.set_name("Frying Pan\n********")
-sheet_music.set_name("Sheet Music\n********")
-silver_knife.set_name("Silver Knife\n********")
-door_bell.set_name("Door Bell\n********")
+frying_pan.set_name("Frying Pan")
+sheet_music.set_name("Sheet Music")
+silver_knife.set_name("Silver Knife")
+door_bell.set_name("Door Bell")
 ###         Characters      ###
 #Enemy    
 dave    =   Enemy("Dave","The caretaker","")
@@ -159,8 +159,6 @@ while dead == False:
     if inhabitant   is not None:
         inhabitant.describe()
 
-
-
     command         =   input(">")
     if command !=   actions: 
         if command in directon:
@@ -185,21 +183,18 @@ while dead == False:
             else:
                 print("no one here to talk with")
 
-
         elif    command ==  "search":
             print("starting the search in 3\n2\n1\nnow!!!!")
             if item   is not None:
                 item.describe()
-     #   How do i get item name?        item.get_item()
-            else:
-                print("Nothing")
-#            if item is not None and isinstance(item):   ###############
-#                print("You have found.....\n Take item or leave item")
-#                if command  ==  "take":
-#                    print("You have taken")
-#                    invertory(item)
-#                else:
-#                    print("you have left the item where it is")
+                command         =   input("What do you want to do?\n take, leave or use?\n>")
+                if command  ==  "take":
+                    print("You have taken")
+                    invertory(item)
+                elif command == "use":
+                    print("You have used............")
+                else:
+                    print("you have left the item where it is")
 
         elif    command ==  "invertory":
             print("invertory contains ")
@@ -213,7 +208,6 @@ while dead == False:
             command         =   input("Input not recognised \n>")
     else:
         command    =   input("Please choese an action;", actions)
-
 
 
 RPGInfo.credits()

@@ -16,6 +16,8 @@ class   Room():
         self.description    =   None        # none = start without a value
         self.linked_rooms   =   {}
         self.character      =   None
+        self.item           =   None
+
         Room.number_of_rooms    =   Room.number_of_rooms    +   1
 
 

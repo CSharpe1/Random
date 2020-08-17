@@ -10,7 +10,7 @@ class   Item():
         """
         self.name           =   item_name    
         self.description    =   None        # none = start without a value
-        self.linked_items   =   {}
+ #       self.linked_items   =   {}
 
     def set_description(self,   item_description):
         """[summary]
@@ -54,3 +54,5 @@ class   Item():
         """
         print(self.name)
 
+    def describe(self):
+        print("The [" + self.name + "] is here - " + self.description )
